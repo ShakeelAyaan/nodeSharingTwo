@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
             size: req.file.size
         });
       const response = await file.save();
-      res.json({ file: `https://node-sharing.onrender.com/files/${response.uuid}` });
+    res.json({ file: `${https://node-sharing.onrender.com}/files/${response.uuid}` });
   });
 
 });
@@ -55,7 +55,7 @@ router.post('/send', async (req, res) => {
       text: `${emailFrom} shared a file with you.`,
       html: require('../services/emailTemplate')({
                 emailFrom, 
-                downloadLink: `${http://localhost:3000}/files/${file.uuid}?source=email` ,
+                downloadLink: `${https://node-sharing.onrender.com}/files/${file.uuid}?source=email` ,
                 size: parseInt(file.size/1000) + ' KB',
                 expires: '24 hours'
             })
